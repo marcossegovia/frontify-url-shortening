@@ -1,0 +1,13 @@
+[
+  {
+    "id": "833825f1-d8d1-4ff1-9747-c219868f2178",
+    "url": "example-url",
+    "createdAt": "2024-03-29T18:35:29+00:00",
+    "aliases": [
+      {
+        "alias": "example-alias",
+        "createdAt": "2024-03-29T18:35:29+00:00"
+      }
+    ]
+  }
+]
