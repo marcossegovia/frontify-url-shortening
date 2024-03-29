@@ -49,7 +49,7 @@ class InMemoryUrlRepository implements UrlRepositoryInterface
         $records = array_filter($this->urls, function (array $currentUrl) use ($alias) {
             return count(array_filter($currentUrl['aliases'], function (array $currentAlias) use ($alias) {
                     return $currentAlias['alias'] === $alias;
-                })) > 0;
+            })) > 0;
         });
 
         if (!empty($records)) {
