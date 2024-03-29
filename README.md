@@ -27,7 +27,7 @@ Run this command in the application directory to run the test suite
 composer test
 ```
 
-## Base Assumptions
+## Base Considerations
 
 * A given URL can be associated with multiple aliases
 * URLs and Aliases are unique, this implies the following behaviour:
