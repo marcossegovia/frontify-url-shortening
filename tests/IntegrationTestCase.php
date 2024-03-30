@@ -10,6 +10,7 @@ use Exception;
 use PHPUnit\Framework\TestCase as PHPUnit_TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Log\LoggerInterface;
 use Slim\App;
 use Slim\Factory\AppFactory;
 use Slim\Psr7\Factory\StreamFactory;
@@ -41,7 +42,7 @@ class IntegrationTestCase extends PHPUnit_TestCase
         $routes = require __DIR__ . '/../app/routes.php';
         $routes($app);
 
-        $errorHandlerMiddleware = new ErrorHandleMiddleware();
+        $errorHandlerMiddleware = new ErrorHandleMiddleware($container->get(LoggerInterface::class));
         $app->addMiddleware($errorHandlerMiddleware);
 
         return $app;
