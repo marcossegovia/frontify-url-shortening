@@ -9,7 +9,7 @@ use Slim\App;
 
 return function (App $app) {
     $app->get('/', function (Request $request, Response $response) {
-        $response->getBody()->write('Hello Frontify!');
+        $response->getBody()->write('Hello Frontify! 👋');
         return $response;
     });
 
